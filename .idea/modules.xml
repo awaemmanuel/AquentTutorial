@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/AquentTutorial.iml" filepath="$PROJECT_DIR$/.idea/AquentTutorial.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/aquent-javascript.iml" filepath="$PROJECT_DIR$/.idea/aquent-javascript.iml" />
     </modules>
   </component>
 </project>

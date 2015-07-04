@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79d0566b-85ab-4388-8f08-87c3b47f12c2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/observer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/observer.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data.json" afterPath="$PROJECT_DIR$/data.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/movies.html" afterPath="$PROJECT_DIR$/movies.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/observer.js" afterPath="$PROJECT_DIR$/observer.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="aquent-javascript.iws" />
@@ -57,11 +56,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="observer.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="observer.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/observer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="observer.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/observer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7147147">
+              <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -90,6 +99,7 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/movies.html" />
         <option value="$PROJECT_DIR$/movies.js" />
+        <option value="$PROJECT_DIR$/observer.js" />
       </list>
     </option>
   </component>
@@ -167,11 +177,14 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.movies.html">
+  <component name="RunManager" selected="JavaScript Debug.observer.html">
     <configuration default="false" name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/aquent-javascript/index.html">
       <method />
     </configuration>
     <configuration default="false" name="movies.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/aquent-javascript/movies.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="observer.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/aquent-javascript/observer.html">
       <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -212,14 +225,16 @@
       <envs />
       <method />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
       <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.movies.html" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.observer.html" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.movies.html" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.observer.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.movies.html" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
       </list>
     </recent_temporary>
   </component>
@@ -246,7 +261,13 @@
       <option name="project" value="LOCAL" />
       <updated>1435961441298</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Software Design patterns using the Observer pattern.">
+      <created>1435968118415</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1435968118415</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -286,7 +307,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added more files for the movie profile project." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added more files for the movie profile project." />
+    <MESSAGE value="Software Design patterns using the Observer pattern." />
+    <option name="LAST_COMMIT_MESSAGE" value="Software Design patterns using the Observer pattern." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -443,6 +465,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/observer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7147147">
+          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
           <folding />
         </state>
       </provider>

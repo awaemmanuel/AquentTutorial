@@ -1,46 +1,64 @@
-var listTemplate = document.getElementById("list_template").innerHTML,
-    detailTemplate = document.getElementById("details_template").innerHTML,
-    searchText = document.getElementById("search_text"),
-    listDiv = document.getElementById("list"),
-    detailDiv = document.getElementById("details"),
-    searchBtn = document.getElementById("search_button");
-
-
-// Add event listener to search button
-searchBtn.addEventListener("click", function() {
-    var title = searchText.value;
-    $.get("http://www.omdbapi.com/?s=" + title, null, null, "json")
-        .done(onSearchResult)
-        .fail(onSearchFail);
+var MovieModel = Backbone.Model.extend({
+    urlRoot: "http://www.omdbapi.com"
 });
 
 
-function onSearchResult(data) {
-    var html = Mustache.render(listTemplate, data);
-    listDiv.innerHTML = html;
+var SearchView = Backbone.View.extend({
+    searchText: document.getElementById("search_text"),
+    events: {
+        "click #search_button" :"doSearch"
+    },
 
-    var items = listDiv.getElementsByTagName("a");
-    for (var i = 0; i < items.length; i++) {
-        var item = items[i];
-        item.addEventListener("click", getDetails);
+    doSearch: function() {
+        searchModel.fetch({
+            data: {
+                s: this.searchText.value
+            }
+        });
     }
+});
 
-}
+var ResultView = Backbone.View.extend({
+    template: document.getElementById("list_template").innerHTML,
 
-function onSearchFail(data) {
-    alert("There was a problem contacting server. Please try again!");
-}
+    initialize: function() {
+        this.listenTo(searchModel, "change", this.render);
+    },
 
-function getDetails(event) {
-    var id = event.target.id;
+    events: {
+        "click a": "getDetails"
+    },
 
-    $.get("http://www.omdbapi.com/?plot=full&i=" + id, null, null, "json")
-        .done(onDetailsResult)
-        .fail(onSearchFail);
-}
+    getDetails: function(event) {
+        detailsModel.fetch({
+            data: {
+                i: event.target.id,
+                plot: "full"
+            }
+        });
+    },
+
+    render: function() {
+        this.el.innerHTML = Mustache.render(this.template, searchModel.toJSON());
+    }
+});
+
+var DetailsView = Backbone.View.extend({
+    template: document.getElementById("details_template").innerHTML,
+
+    initialize: function() {
+        this.listenTo(detailsModel, "change", this.render);
+    },
+
+    render: function() {
+        this.el.innerHTML = Mustache.render(this.template, detailsModel.toJSON());
+    }
+});
+
+var searchModel = new MovieModel(),
+    detailsModel = new MovieModel(),
+    searchView = new SearchView({ el: document.getElementById("search")}),
+    resultView = new ResultView({ el: document.getElementById("list")}),
+    detailsView = new DetailsView({ el: document.getElementById("details")});
 
 
-function onDetailsResult(data) {
-    var html = Mustache.render(detailTemplate, data);
-    detailDiv.innerHTML = html;
-}
